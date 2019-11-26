@@ -1,23 +1,81 @@
 \documentclass[12pt]{article}
 \usepackage[]{fullpage}
 \title{Chapter 4: Notes}
-\author{Evan Hunt}
+\author{} 
 \begin{document}
     \maketitle
+    \pagenumbering{arabic}
+    \noindent\rule{\textwidth}{0.4pt}
+    \section*{Section 4.1}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Probability for Equally likely Outcomes (f/N Rule)}
+            Suppose an experiment has N possible outcomes, all equally likely. An even that can occur in f ways has probability f/N of occuring:
+            \begin{center}
+                \[
+                    Probability of an event = \frac{f}{N}.     
+                \]                
+            \end{center}
+            For an experiment with equally likely outcomes probabilities are identical to relative frequencies (or percentages).
+        \subsection{Basic Properties of probabilities}
+            \begin{itemize}
+                \item Property 1: The probability of an event is always between 0 and 1, inclusive.
+                \item Property 2: The probabilty of an event that cannot occur is 0. (An event that cannot occur is called an impossible event.)
+                \item Property 3: The probability of an event that must occur is 1. (An event that must occur is called a certain event.)
+            \end{itemize}
 
-    \section[]{Section 4.1}
-        %text
-        \begin{equation}
-        
-        \end{equation}
-    \section[]{Section 4.2}
-        %text
-    \section[]{Section 4.3}
-        %text
-    \section[]{Section 4.4}
-        %text
-    \section[]{Section 4.5}
-        %text
+    \section*{Section 4.2}
+        \subsection*{Sample Space and Event}
+            \begin{itemize}
+                \item Sample Space: The collection of alll possible outcomes for an experiment.
+                \item Event: A collection of outcomes for the experiment, that is any subset of the sample spce. An event occurs if only the outcome of the experiment is a memeber of the event.
+            \end{itemize}
+        \subsection*{Relationships Among Events}
+            \begin{itemize}
+                \item (\(\neg A\)): "The event "A does not occur"
+                \item (\(A \wedge B\)): "The event "both A and B occur"
+                \item (\(A \vee B\): "The event "either A or B occur"
+            \end{itemize}
+        \subsection*{Mutually Exclusive Events}
+            \subsubsection*{}    
+               Two or more events are mutually exclusive events if not two of them have outcomes in common.
+            \subsubsection*{}
+               Events are mutually exclusive if no two of them can occur simultaneously or, equivalently, if at most one of the events can occur when the experiment is performed.
+    \section*{Section 4.3}
+        \subsection*{Probability Notation}
+            If E is an event, then P(E) represents the probability that event E occurs. It is read "the probability of E."
+        \subsection*{The Special Addition Rule}
+            If event A and event B are mutually exclusive, then
+            \begin{center}
+                \[
+                    P(A \vee B) = P(A)  + P(B).  
+                \]
+            \end{center}
+            More generally, if events A, B, C,... are mutually exclusive, then
+            \begin{center}
+                \[
+                    P(A \vee B \vee C \vee ...) = P(A) + P(B) + P(C) +...    
+                \]                
+            \end{center}
+            For mutually exclusive events, the probability that at least one occurs equals the sum of their individual probabilities.
+        \subsection*{The Complementation Rule}
+            For any event A,
+            \begin{center}
+                \[
+                    P(A) = 1 - P(\neg A).                
+                \]
+            \end{center}
+            The probability that an event occurs equals 1 minus the probability that it does not.
+        \subsection*{The general Addition Rule}
+            If A and B are any two events, then
+            \begin{center}
+                \[
+                    P(A \vee B) = P(A) + P(B) - P(A \wedge B) 
+                \]
+            \end{center}
+            For any two events, the probability that at least one occurs equals the sum of their individual probabilitis minus the probabilities that both occur.
+    \section*{Section 4.4}
+
+    \section*{Section 4.5}
 
 \end{document}
 

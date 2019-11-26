@@ -1,23 +1,192 @@
 \documentclass[12pt]{article}
 \usepackage[]{fullpage}
 
-\title{Chapter 3: Notes}
-\author{Evan Hunt}
+\title{Chapter 3: Descriptive Measures}
+\author{}
 \begin{document}
     \maketitle
-
-    \section[]{Section 3.1}
-        %text
-    \section[]{Section 3.2}
-        %text
-    \section[]{Section 3.3}
-        %text
-    \section[]{Section 3.4}
-        %text
-    \section[]{Section 3.5}
-        %text
-
+    \pagenumbering{arabic}
+    \noindent\rule{\textwidth}{0.4pt}
+    \section*{Section 3.1}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Mean of a Data Set}
+            The mean of a data set is the sum of the observations divided by the number of
+            observations, also known as the arithmetic mean.
+        \subsection*{Median of a Data Set}
+            The median of a data set is the middle value in its ordered list.
+            Arrange the data in increasing order.
+            \begin{itemize}
+                \item If the number of observations is odd, then the 
+                median is the observations exactly in the middle of the ordered list.
+                \item If the number of observations is even, then the median is the
+                mean of the two middle observations in the ordered list.
+            \end{itemize}
+            In both cases, if we let n denote the number of observations, then the
+            median is at position \((n+1)/2\) in the ordered list.
+        \subsection*{Mode of a Data Set}
+            The mode of a data set is the most frequently occuring value.
+                Find the frequency of each value in the data set.
+                \begin{itemize}
+                    \item If no value occurs more than once, then the data set has no mode,
+                    or all values are modes.
+                    \item Otherwise, any value that occurs with the greatest frequency is a
+                    mode of the data set
+                \end{itemize}
+        \subsection*{Sample Mean}
+                For a variable x,the mean of the observations for a asamplw is called a
+                sampe mean and is denoted \(\bar{x}\). Symbolically,
+                \begin{equation}
+                    \bar{x} = \frac{\sum{x_i}}{n},
+                \end{equation}
+                where n is the sample size.
+    \section*{Section 3.2}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Range of a Data Set}
+            The range of a data set is the difference between its largest and smallest values.
+            The range of a data set is given by the formula
+            \begin{equation}
+                Range = Max - Min,
+            \end{equation}
+            where Max and Min denote the maximum and minimum observations, respectively.
+        \subsection*{Sample Standard Deviation}
+            \subsubsection*{}
+                For a variable x, the standard deviation of the observations for a sample is called
+                a sample standard deviation. It is denoted \(s_x\), or, when no confusion will arise, simply s.
+                We have
+                \begin{equation}
+                    s = \sqrt{\frac{\sum{(x_i-\bar{x})^2}}{n-1}},                
+                \end{equation}
+                where n is the sample size and \(bar{x}\) is the sample mean.
+            \subsubsection*{}
+                Roughly speaking, the sample standard deviation indicates how far, on average, the observations
+                in the sample are from the mean of the sample.
+        \subsection*{Variation and the Standard Deviation}
+                The more variation that there is in a data set, the larger is its standard deviation.
+        \subsection*{Computing Formula for a SampLe Standard Deviation}
+            A sample standard deviation can be computed using the formula
+            \begin{equation}
+                s = \sqrt{\frac{\sum{x_i^2}-(\sum{x_i})^2/n}{n-1}}                     
+            \end{equation}
+            where n is the sample size.
+        \subsection*{Three-Standard Deviation Rule}
+            Almost all the observations in any data set lie within three standard deviation to the either side of the mean.
+    \section*{Section 3.3}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Chebyshev's Rule}
+            For any the quantitative data set and any real number k greater than or equal to 1, at least \(1-1/k^2\) of the
+            observations lie within k standard deviations to either side of the mean, that is, between \(\bar{x}-k*s\) and \(\bar{x}+k*s\).
+        \subsection*{Empirical Rule}
+        For any quantitative data set with roughly a bell-shaped distribution, the following properties hold.
+        \begin{itemize}
+            \item{Property 1:} Approximately 68\% of the observations lie within one standard deviation to either side of the mean, that is,
+            between \(\bar{x}-s\) and \(\bar{x}+s\).
+            \item{Property 2:} Approximately 95\% of the obsercations lie within two standard deviations to either side of the mean, that is,
+            between \(\bar{x}-2s\) and \(\bar{x}+2s\).
+            \item{Property 3:} Approximately 99.7\% of th eobservations lie withing three standard deviations to either side of the mean,
+            that is, between \(\bar{x}-3s\) and \(bar{x}+3s\).
+        \end{itemize}
+    \section*{Section 3.4}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Quartiles}
+            \subsubsection*{}
+                Quartiles divide a data set into quarters (four equal parts).
+                \begin{itemize}
+                    \item{Q1:} The first quartile is the median of the bottom half of the data set.
+                    \item{Q2:} The second quartile is the median of the entire data set.
+                    \item{Q3:} The third is the median of the top half of the data set.
+                \end{itemize}
+            \subsubsection*{Procedure for Quartiles}
+                \begin{itemize}
+                    \item{Step 1:} Arrange the data in increasing order.
+                    \item{Step 2:} Find the median of the entire data set. This value is the second quartile, \(Q_2\)
+                    \item{Step 3:} Divide the ordered data set into two halves, a bottom half and a top half;
+                    if the number of observations is odd, include the median in both halves.
+                    \item{Step 4:} Find the median of the bottom half of the data set. This value is the first quartile, \(Q_1\).
+                    \item{Step 5:} Find the median of the top half of the data set. Thiis is the third quartile, \(Q_3\).
+                    \item{Step 6:} Summarize the results.
+                \end{itemize}
+        \subsection*{Interqaurtile Range}
+                The interquatile range, or IQR, is the difference between the first and third quartiles, that is, \(IQR = Q_3 - Q_1\).
+                Roughly speaking, the IQR gives the range of the middle 50\% of the observations.
+        \subsection*{Five-Number Summary}
+            The five-number summary of a data set consists of the minimum, maximum, and the quartiles, in increasing order.
+            \begin{center}
+                \[
+                    Min, Q_1, Q_2, Q_3, Max.    
+                \]
+            \end{center}
+        \subsection*{Lower and Upper Limits}
+            The lower limit is the number that lies 1.5 IQRs below the first quartile; the upper limit is the number that lies 1.5 
+            IQRs above the third quartile.
+            \begin{center}
+                \[
+                    Lower limit = Q_1 - 1.5 * IQR;
+                \]
+                \[
+                    Upper limit = Q_3 + 1.5 * IQR.  
+                \]
+            \end{center}
+        \subsection*{Procedure for Boxplots}
+            \begin{itemize}
+                \item{Step 1;} Determine the quartiles.
+                \item{Step 2:} Determine the outliers and adjacent values.
+                \item{Step 3:} Draw a horizontal axis on which the numbers obtained in Steps 1 and 2 can be located. Above this axis,
+                mark the quartiles and adjacent values with verticle lines.
+                \item{Step 4:} Connect the quartiles to make a box, and then connect the box to the adjacent values with lines.
+                \item{Step 5:} Plot each potential outlier with an asterisk.
+            \end{itemize}
+            Note:
+            \begin{itemize}
+                \item In a boxplot, the two lines emanating from the box are called whiskers.
+                \item Boxplots are frequently drawn verticlly instead of horizontally.
+                \item Symbols other than an asterisk are often used to plot potential outliers.
+            \end{itemize}
+    \section*{Section 3.5}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Population Mean (Mean of a Variable)}
+            A population mean is the arithmetic mean of a population data (variable). For a variable x, the mean of all possible observations
+            for the entire population is called the population mean or mean of the variable x. It is denoted \(\mu_x\) or, when no confusion 
+            will arise, simply \(\mu\). For a finite population,
+            \begin{center}
+                \[
+                    \mu = \frac{\sum{x_i}}{N},    
+                \]    
+            \end{center}
+            where N is the population size.
+        \subsection*{Population Standard Deviation (Standard Deviation of a Variable)}
+            \subsubsection*{}    
+                For a variable x, the standard deviation of all possible observations for the entire population is called the population standard 
+                deviation or standard deviation of the variable x. It is denoted \(\sigma_x\) or, when no confusion will arise, simply \(\sigma\). 
+                For a finite population, the defining formula is
+                \begin{center}
+                    \[
+                        \sigma = \sqrt{\frac{\sum(x_i-\mu)^2}{N}}
+                    \]                
+            \end{center}
+                where N is the population.
+            \subsubsection*{}
+                The population standard deviation can also be found from the computing formula 
+                \begin{center}
+                    \[
+                        \sigma = \sqrt{\frac{\sum x_i^2}{N}-\mu}
+                    \]                    
+                \end{center}
+        \subsection*{Parameters and Statistics}
+            \begin{itemize}
+                \item Parameter: A descriptive measure for a population.
+                \item Statistic: A decriptive measure for a sample.
+            \end{itemize}
+        \subsection*{Standardized Variable}
+            For a variable x, the variable
+            \begin{center}
+                \[
+                    z = \frac{x-\mu}{\sigma},    
+                \]
+            \end{center}
+            is called the standardized version of x or the standardized variable corresponding to the variable x.
+        \subsection*{z=Score}
+            For an observed value of a variable x, the corresponding value of the standardizedvariable z is called
+            the z-score of the observation. The term standard score is often used instead of z-score. The z-score of
+            an observation tells us the number of standard deviations that the observation is from the mean, that is,
+            how far the observation is from the mean in units of standard deviations.
 \end{document}
-
-
-
