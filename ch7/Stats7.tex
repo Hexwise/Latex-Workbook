@@ -1,31 +1,80 @@
 \documentclass[12pt]{article}
 \usepackage[]{fullpage}
 \title{Chapter 7: Notes}
-\author{Evan Hunt}
+\author{}
 \begin{document}
     \maketitle
 
     \noindent\rule{\textwidth}{0.4pt}
-    \section[]{Section 7.1}
+    \section*{Section 7.1}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-        \begin{equation}
-            f(x) = \frac{7}{\sqrt{2*x}}
-        \end{equation}
-    \section[]{Section 7.2}
+        \subsection*{Sampling Error}    
+            Sampling error is the error resulting from using a sample to estimate a population
+            characteristic.
+        \subsection*{Sampling Distribution of the Sample Mean}
+            For a variable $x$ and a given sample size, the distribution of the variable
+            $\bar{x}$ is called the sampling distribution of the sample mean. The sampling 
+            distribution of the sample mean is the distribution of all possible sample means
+            for the samples of a given size.
+        \subsection*{Sample Size and Sampling Error}
+            The larger the sample size, the smaller the sampling error tends to be in estimating
+            a population mean, $\mu$, by a sample mean. $\bar{x}$. The possible sample means
+            cluster more closely around the population mean as the sample size increases.
+
+    \section*{Section 7.2}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 7.3}
+        \subsection*{Mean of the Sample Mean}
+            For samples of size $n$, the mean of the variable $\bar{x}$ equals the mean of the
+            variable under consideration. In symbols,
+            \begin{center}
+                \[
+                    \mu_{\bar{x}} = \mu    
+                \]
+            \end{center}
+            For any sample size, the mean of all possible samples equals the population mean.
+        \subsection*{Standard Deviation of the Sample Mean}
+            For samples of size $n$, the standard deviation of the variable $\bar{x}$ equals the 
+            standard deviation of the variable under consideration divided by the square roots
+            of the sample size. In symbols,
+            \begin{center}
+                \[
+                    \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}
+                \]
+            \end{center}
+            For each sample size, the standard deviation of all possible sample means equals the
+            standard deviation divided bu the square root of the sample size.
+            \subsubsection*{Note:}
+                In the formula for the standard deviation of $\bar{x}$, the sample size, $n$
+                appears in the denominator. this explains mathematically why the standard
+                deviation of $\bar{x}$ decreases as the sample size increases.
+    \section*{Section 7.3}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 7.4}
-    \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 7.5}
-    \noindent\rule{\textwidth}{0.4pt}
-        %text
+        \subsection*{Sampling Distribution of the Sample Mean for a Normally Distributed
+        Variable}
+            For a normally distributed variables, the possible sample means for samples of given
+            size are also normally distributed. Suppose that a variable $x$ of a population is
+            normally distributed with mean $\mu$ and standard deviation $\sigma$. Then, for
+            samples of size $n$, the variable $\bar{x}$ is also normally distributed and has mean
+            $\mu$ and standard deviation $\sigma / sqrt{n}$.
+        \subsection*{The Central Limit Theorem (CLT)}
+            For a relatively large sample size, the variable $\bar{x}$ is approximately normally
+            distributed, regardless of the distribution of the variable under consideration. The
+            approximation becomes better with increasing sample size.
+        \subsection*{Sampling Distribution of the Sample Mean}
+            Suppose that a variable $x$ of a population has mean $\mu$ and standard deviation
+            $\sigma$. Then, for samples of size $n$.
+            \begin{itemize}
+                \item the mean of $\bar{x}$ equals the population mean, or $\mu_{\bar{x}} = \mu$;                
+                \item the standard deviation of $\bar{x}$ equals the population standard
+                deviation divided by the square roo of the sample size, or $\sigma_{bar{x}} =
+                \frac{\sigma}{\sqrt{n}}$;
+                \item if $x$ is normally distributed, so is $\bar{x}$, regardless of sample size;
+                and
+                \item if the sample size large, $\bar{x}$ is approximately normally distributed,
+                regardless of the distribution of $x$.
+            \end{itemize}
+            If a variable is normally distributed or the sample size large, then the possible 
+            sample means have, at least approximately, a normal distribution with mean $\mu$
+            and standard deviation $\sigma / sqrt{n}$.  
 
 \end{document}
-
-
-
