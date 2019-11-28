@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[]{fullpage}
-\title{Chapter 4: Notes}
+\title{Chapter 4: Probability}
 \author{} 
 \begin{document}
     \maketitle
@@ -9,25 +9,29 @@
     \section*{Section 4.1}
     \noindent\rule{\textwidth}{0.4pt}
         \subsection*{Probability for Equally likely Outcomes (f/N Rule)}
-            Suppose an experiment has N possible outcomes, all equally likely. An even that can occur in f ways has probability f/N of occuring:
+            Suppose an experiment has N possible outcomes, all equally likely. An even that can
+            occur in f ways has probability f/N of occurring:
             \begin{center}
-                \[
-                    Probability of an event = \frac{f}{N}.     
-                \]                
+                Probability of an event = $\frac{f}{N}$     
             \end{center}
-            For an experiment with equally likely outcomes probabilities are identical to relative frequencies (or percentages).
+            For an experiment with equally likely outcomes probabilities are identical to relative 
+            frequencies (or percentages).
         \subsection{Basic Properties of probabilities}
             \begin{itemize}
                 \item Property 1: The probability of an event is always between 0 and 1, inclusive.
-                \item Property 2: The probabilty of an event that cannot occur is 0. (An event that cannot occur is called an impossible event.)
-                \item Property 3: The probability of an event that must occur is 1. (An event that must occur is called a certain event.)
+                \item Property 2: The probability of an event that cannot occur is 0. (An event 
+                that cannot occur is called an impossible event.)
+                \item Property 3: The probability of an event that must occur is 1. (An event that 
+                must occur is called a certain event.)
             \end{itemize}
-
     \section*{Section 4.2}
+    \noindent\rule{\textwidth}{0.4pt}
         \subsection*{Sample Space and Event}
             \begin{itemize}
-                \item Sample Space: The collection of alll possible outcomes for an experiment.
-                \item Event: A collection of outcomes for the experiment, that is any subset of the sample spce. An event occurs if only the outcome of the experiment is a memeber of the event.
+                \item Sample Space: The collection of all possible outcomes for an experiment.
+                \item Event: A collection of outcomes for the experiment, that is any subset of the
+                sample space. An event occurs if only the outcome of the experiment is a member of
+                the event.
             \end{itemize}
         \subsection*{Relationships Among Events}
             \begin{itemize}
@@ -36,13 +40,15 @@
                 \item (\(A \vee B\): "The event "either A or B occur"
             \end{itemize}
         \subsection*{Mutually Exclusive Events}
-            \subsubsection*{}    
-               Two or more events are mutually exclusive events if not two of them have outcomes in common.
-            \subsubsection*{}
-               Events are mutually exclusive if no two of them can occur simultaneously or, equivalently, if at most one of the events can occur when the experiment is performed.
+               Two or more events are mutually exclusive events if not two of them have outcomes in
+               common.
+               Events are mutually exclusive if no two of them can occur simultaneously or,
+               equivalently, if at most one of the events can occur when the experiment is performed.
     \section*{Section 4.3}
+    \noindent\rule{\textwidth}{0.4pt}
         \subsection*{Probability Notation}
-            If E is an event, then P(E) represents the probability that event E occurs. It is read "the probability of E."
+            If E is an event, then P(E) represents the probability that event E occurs. It is read
+            "the probability of E."
         \subsection*{The Special Addition Rule}
             If event A and event B are mutually exclusive, then
             \begin{center}
@@ -50,13 +56,14 @@
                     P(A \vee B) = P(A)  + P(B).  
                 \]
             \end{center}
-            More generally, if events A, B, C,... are mutually exclusive, then
+            More generally, if events A, B, C,$\dots$ are mutually exclusive, then
             \begin{center}
                 \[
-                    P(A \vee B \vee C \vee ...) = P(A) + P(B) + P(C) +...    
+                    P(A \vee B \vee C \vee \dots) = P(A) + P(B) + P(C) + \dots    
                 \]                
             \end{center}
-            For mutually exclusive events, the probability that at least one occurs equals the sum of their individual probabilities.
+            For mutually exclusive events, the probability that at least one occurs equals the sum
+            of their individual probabilities.
         \subsection*{The Complementation Rule}
             For any event A,
             \begin{center}
@@ -72,12 +79,138 @@
                     P(A \vee B) = P(A) + P(B) - P(A \wedge B) 
                 \]
             \end{center}
-            For any two events, the probability that at least one occurs equals the sum of their individual probabilitis minus the probabilities that both occur.
+            For any two events, the probability that at least one occurs equals the sum of their
+            individual probabilities minus the probabilities that both occur.
     \section*{Section 4.4}
-
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Contingency Tables}
+            \subsubsection*{}
+                Univariate data is data that comes from one variable of a population.
+            \subsubsection*{}
+                Bivariate data is data that comes from two variables of a population.
+            \subsubsection*{}
+                A frequency table for bivariate data is a contingency table.
+                \begin{center}
+                    \begin{table}[h!]
+                        \centering
+                        \caption{Contingency Table}
+                        \label{tab:LABEL}
+                        \begin{tabular}{l|l|l|l|l|l}
+         & $A_1$               & $A_2$               & \dots & $A_n$               & $P(B_j)$          \\
+\hline
+$B_1$    & $P(A_1 \wedge B_1)$ & $P(A_2 \wedge B_1)$ & \dots & $P(A_n \wedge B_1)$ & $P(B_1)$         \\
+$B_2$    & $P(A_1 \wedge B_2)$ & $P(A_2 \wedge B_2)$ & \dots & $P(A_n \wedge B_2)$ & $P(B_2)$         \\
+\dots    & \dots               & \dots               & \dots & \dots               & \dots            \\
+$B_m$    & $P(A_1 \wedge B_m)$ & $P(A_2 \wedge B_m)$ & \dots & $P(A_n \wedge B_m)$ & $P(B_m)$         \\
+$P(A_i)$ & $P(A_1)$            & $P(A_2)$            & \dots & $P(A_n)$            & $P(A \vee B) =1$ \\
+                        \end{tabular}
+                      \end{table}
+                \end{center}
     \section*{Section 4.5}
-
+        \subsection*{Conditional Probability}
+            \subsubsection*{}
+                The probability that event B occurs given that event A occurs is called conditional 
+                probability. It is denoted P(B|A),
+                which is read "the probability of B given A." We call A the given event.
+            \subsubsection*{}
+                A conditional probability of an event is the probability that the event occurs under
+                the assumption that another event occurs.
+        \subsection*{The conditional Probability Rule}
+            If A and B are any two events with P(A) > 0, then
+            \begin{center}
+                \[
+                P(B|A) = \frac{P(A \wedge B)}{P(A)}
+                \]
+            \end{center}
+            The conditional probability of one event given another equals the probability that both 
+            events occur divided by the probability of the given event.
+    \section*{Section 4.6}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{The General Multiplication Rule}
+            If A and B are any two events, then 
+            \begin{center}
+                \[
+                    P(A \wedge B) = P(A) * P(B|A)
+                \]
+            \end{center}
+            For any two events, the probability that both occur equals the probability that a specified
+            once occurs tines the conditional probability of the other event, given the specified event.         
+        \subsection*{Independent Events}
+            Event B is said to be independent of event A if P(B|A) = P(B). One event is independent of 
+            another event if knowing whether the latter event occurs
+            does not affect the probability of the former event.
+        \subsection*{The Special Multiplication Rule (for Two Independent Events)}
+            If A and B are independent events, then
+            \begin{center}
+                \[
+                    P(A \wedge B) = P(A) * P(B)    
+                \]
+                and conversely, if $P(A \wedge B) = P(A) * P(B)$, then A and B are independent events. 
+            \end{center}
+            Two events are independent if and only if the probability that both occur equals the product
+            of their individual probabilities.
+        \subsection*{The Special Multiplication Rule}
+            If events A, B, C,$\dots$ are independent, then
+            \begin{center}
+                \[
+                    P(A \wedge B \wedge C \wedge \dots) = P(A) * P(B) * P(C) \dots     
+                \]
+            \end{center}
+            For independent events,the probability that they all occur equals the product of their 
+            individual probabilities.
+    \section*{Section 4.7}
+        \subsection*{The Rule of total Probability}
+        Suppose that events $A_1, A_2,\dots, A_k$ are mutually exclusive and exhaustive; that is, 
+        exactly one of them must occur. Then for any event B,
+        \begin{center}
+            \[
+                P(B) = \sum_{i=1}^n P(A_i) * P(B|A_i)
+            \]
+        \end{center}
+        \subsection*{Bayes's Rule}
+            Suppose that events $A_1, A_2,..., A_k$ are mutually exclusive and exhaustive. Then for 
+            any event B,
+            \begin{center}
+                \[
+                    P(A_i|B) = \frac{P(A_i) * P(B|A_i)}{\sum_[j=1]^k P(A_j) * P(B|A_j)}    
+                \]
+            \end{center}
+            where $A_i$ can be any one of events $A_1, A_2,\dots, A_k$.
+    \section*{Section 4.8}
+        \subsection*{The Basic Counting Rule (BCR)'}
+            Suppose that r actions are to be performed in a definite order. Further suppose that
+            there are $m_1$ possibility for the first action and that corresponding to each of
+            these possibilities are $m_1 * m_2 * \dots * m_r$ possibilities altogether for the r
+            actions. In other words, the total
+            number of ways that several actions can occur equals the product of the individual 
+            number of ways for each action.
+        \subsection*{Factorials}
+            The product of the first $k$ positive integers (counting numbers) is call k factorial
+            and is denoted k!. In symbols,
+            \begin{center}
+                \[
+                    k! = k * (k-1) * \dots * 2 * 1
+                \]
+            \end{center}
+            We also define 0! = 1.
+        \subsection*{The Permutations Rule}
+            The number of possible permutations of $k$ objects from a collection of $n$ objects 
+            is given the formula
+            \begin{center}
+                \[
+                    _nP_k = \frac{n!}{(n-k)!}
+                \]
+            \end{center}
+        \subsection*{The Special Permutation Rule}
+            The number of permutations of $n$ objects among themselves is n!.
+        \subsection*{The Combinations Rule}
+            The number of possible combinations of $k$ objects from a collection of $n$ objects 
+            is given by the formula
+            \begin{center}
+                \[
+                    _nC_k = \frac{n!}{k!(n-k)!}    
+                \]                
+            \end{center}
+        \subsection*{Number of Possible Samples}
+            The number of possible samples of size $n$ from a population of size $N$ is $_NC_n$.
 \end{document}
-
-
-
