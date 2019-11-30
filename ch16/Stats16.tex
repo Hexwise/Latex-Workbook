@@ -1,30 +1,135 @@
 \documentclass[12pt]{article}
 \usepackage[]{fullpage}
 \title{Chapter 16: Notes}
-\author{Evan Hunt}
+\author{}
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 \begin{document}
     \maketitle
 
     \noindent\rule{\textwidth}{0.4pt}
-    \section[]{Section 16.1}
+    \section*{Section 16.1}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-        \begin{equation}
-            f(x) = \frac{16}{\sqrt{2*x)}
-        \end{equation}
-    \section[]{Section 16.2}
-    \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 16.3}
-    \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 16.4}
-    \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 16.5}
-    \noindent\rule{\textwidth}{0.4pt}
-        %text
+        \subsection*{Basic Properties of $F$-Curves}
+            \begin{description}
+                \item[Property 1:] The total area under an $F$-curve equals 1.
+                \item[Property 2:] An $F$-curve starts at 0 on the horizontal axis and
+                extends indefinitely to the right, approaching, but never touching, the
+                horizontal axis as it does so.
+                \item[Property 3:] An $F$-curve is right-skewed. 
+            \end{description}
 
+    \section*{Section 16.2}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Assumptions (Conditions) for One-Way ANOVA}
+            \begin{description}
+                \item[Simple random samples:] The samples taken from the populations under
+                consideration are simple random samples. 
+                \item[Independent samples:] The samples taken from the populations under
+                consideration are independent of one another.
+                \item[Normal populations:] For each population, the variable under
+                consideration is normally distributed.
+                \item[Equal standard deviations:] The standard deviations of the variable
+                under consideration are the same for all the populations.   
+            \end{description}
+        \subsection*{Mean Squares and $F$-Statistic in One-Way ANOVA}
+            \begin{description}
+                \item[Treatment mean square, $MSTR$:] The variation among the sample means:
+                $MSTR = SSTR/(k-1)$, where $SSTR$ is the treatment sum of squares and $k$ is
+                the number of populations under consideration.
+                \item[Error mean square, $MSE$:] The variation within the sample: $MSE = SSE/
+                (n-k)$, where $SSE$ is the error sum of squares and $n$ is the total number
+                of observations.
+                \item[$f$-Statistic, $F$:] The ratio of the variation among the sample means
+                variation within the samples: $F = MSTR/MSE$.  
+            \end{description}
+
+    \section*{Section 16.3}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Distribution of the $F$-Statistic for One-Way ANOVA}
+            Suppose that the variable under consideration is normally distributed on each of
+            k populations and that the population standard deviations are equal. Then, for
+            independent samples from the $k$ populations, the variable
+            \begin{center}
+                \[
+                    F = \frac{MSTR}{MSE}    
+                \]
+            \end{center}
+            has the $F$-distribution with $df = (k-1, n-k)$ if the null hypothesis of equal
+            population means is true. Here, $n$ denotes the total number of observations.
+        \subsection*{One-Way ANOVA Identity}
+            The total sum of squares equals the treatment sum of squares plus the error sum
+            of squares: $SST = SSTR + SSE$. $SST$ measures the total variation among all the
+            sample data. The total variation among all the sample data can be partitioned
+            into two components, one representing variation among the sample means and the
+            other representing variation within the samples.
+        \subsection*{Sums of Squares in One-Way ANOVA}
+            For a one-way ANOVA of $k$ population means, the defining and computing
+            formulas for the three sums of squares are as follows.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|l|l}
+        Sum of squares&   Defining formula        &   Computing formula \B \\
+        \hline
+        Total, $SST$  &   $\sum(x_i-\bar{x})^2$   &   $\sum x_i^2 - (\sum x_i)^2/n)$ \T\B \\
+        Treatment, $SSTR$ &   $\sum n_j(\bar{x_j}-\bar{x})^2$ &   $\sum(T_j^2/n_j)-(\sum x_i)^2/n$ \T\B \\
+        Error, SSE    &   $\sum(n_j-1)s_j^2$  &   $SST-SSTR$ \T \\
+    \end{tabular}
+\end{table}
+            In this table, we used the notation
+            \begin{center}
+                $n$ = total number of observations,         \newline
+                $\bar{x}$ = mean of all $n$ observations;   \newline
+            \end{center}
+            and, for $j$ = 1, 2,$\dots$,$k$,
+            \begin{center}
+                \begin{description}
+                    \item[$n_j$] = size of sample from Population $j$          
+                    \item[$\bar{x}_j$] = mean of sample from Population $j$    
+                    \item[$s_j^2$] = variance of sample from Population $j$    
+                    \item[$T_j$] = sum of sample data from Population  $j$     
+                \end{description}
+            \end{center}
+            Note that a summation involving a subscript $i$ is over all $n$ observations;
+            one involving a subscript $j$ is over the $k$ populations.
+        \subsection*{One-Way ANOVA Test}
+            \begin{description}
+                \item[Purpose] To perform a hypothesis test to compare $k$ population
+                means, $\mu_1, \mu_2,\dots,\mu_k$ 
+                \item[Assumption]
+                \begin{enumerate}
+                    \item Simple random samples
+                    \item Independent samples
+                    \item Normal populations
+                    \item Equal population standard deviations
+                \end{enumerate} 
+                \item[Step 1] The null and alternative hypotheses are, respectively,
+                \begin{center}
+                    \[
+                        H_0: \mu_1 = \mu_2 = \dots = \mu_k
+                    \]
+                    $H_a$: Not all the means are equal.
+                \end{center} 
+                \item[Step 2] Decide on the significance level, $\alpha$.
+                \item[Step 3] Compute the value of the test statistic  
+                \begin{center}
+                    \[
+                        F = \frac{MSTR}{MSE}    
+                    \]
+                \end{center}
+                and denote that value $F_0$. To do so, construct a one-way ANOVA table:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|l|l|l|l}
+        Source&$df$&$SS$&$MS = SS/df$&$F-statistic$ \B \\
+        \hline
+        Treatment&$k-1$&$SSTR$&$MSTR=\frac{SSTR}{k-1}$&$F=\frac{MSTR}{MSE}$ \T\B \\
+        Error&$n-k$&$SSE$&$MSE=\frac{SSE}{n-k}$& \T\B \\
+        Total&$n-1$&$SST$&& \T \\
+    \end{tabular}
+    \end{table}
+\end{description}
+    
 \end{document}
 
 

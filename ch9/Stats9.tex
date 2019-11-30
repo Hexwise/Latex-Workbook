@@ -1,29 +1,262 @@
 \documentclass[12pt]{article}
 \usepackage[]{fullpage}
-\title{Chapter 9: Notes}
-\author{Evan Hunt}
+\title{Chapter 9: Hypothesis Tests for One Population Mean}
+\author{}
 \begin{document}
     \maketitle
 
     \noindent\rule{\textwidth}{0.4pt}
-    \section[]{Section 9.1}
+    \section*{Section 9.1}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-        \begin{equation}
-            f(x) = \frac{9}{\sqrt{2*x}}
-        \end{equation}
-    \section[]{Section 9.2}
+        \subsection*{Null and Alternative Hypotheses; Hypothesis Test}
+            \begin{description}
+                \item[Null hypothesis:] A hypothesis to be tested. We use the symbol $H_0$ to
+                represent the null hypothesis.
+                \item[Alternative hypothesis:] A hypothesis to be considered as an alternative
+                to the null hypothesis. We use the symbol $H_a$ to represent the
+                alternative hypothesis.
+                \item[Hypothesis test:] The problem in a hypothesis test is to decide whether
+                the null hypothesis should be rejected.                
+            \end{description}
+            \subsubsection*{Basic Logic of Hypothesis Testing}
+                Take a random sample from the population. If the sample data are consistent
+                with the null hypothesis, do not reject the null hypothesis; if the sample data
+                are inconsistent with the null Hypothesis and supportive of the alternative
+                hypothesis, reject the null hypothesis in favor of the alternative hypothesis.
+        \subsection*{Type I and Type II Errors}
+            \begin{description}
+                \item[Type I error:] Rejecting the null hypothesis when it is in fact true.
+                \item[Type II error:] Not rejecting the null hypothesis when it is in fact
+                false. 
+            \end{description}    
+            \subsubsection*{Significance Level}
+                The probability of making a Type I error, that is, of rejecting the null
+                hypothesis, is called the significance level, $\alpha$, of a hypothesis test.
+            \subsubsection*{Relation between Type I and Type II Error Probabilities}
+                For a fixed sample size, the smaller we specify the significance level,
+                $\alpha$, the larger will be the probability, $\beta$, of not rejecting a 
+                false hypothesis.
+        \subsection*{Possible Conclusions for a Hypothesis Test}
+            Suppose that a hypothesis test is conducted at a small significance level.
+            \begin{itemize}
+                \item If the hypothesis is rejected, we could conclude that the data provided
+                sufficient evidence to support the alternative hypothesis.
+                \item If the null hypothesis is not rejected, we conclude that the data do not
+                provide sufficient evidence to support the alternative hypothesis.                 
+            \end{itemize}
+
+    \section*{Section 9.2}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 9.3}
+        \subsection*{Rejection Region, Nonrejection Region, and Critical Values}
+            \begin{description}
+                \item[Rejection region:] The set of values for the test statistic that leads
+                to nonrejection of the null hypothesis.
+                \item[Nonrejection region:] The set of values for the test statistic that leads
+                to nonrejection of the null hypothesis.
+                \item[Critical Value(s):] The value or values of the test statistic that
+                separate the rejection and nonrejection regions. A critical value is considered
+                part of the rejection region.  
+            \end{description}
+            If the value of the test statistic falls in the rejection region, reject the null
+            hypothesis; otherwise, do not reject the null hypothesis.
+            \subsubsection*{Obtaining Critical Values}
+                Suppose that a hypothesis test is to be performed at the significance level
+                $\alpha$. Then the critical value(s) must be chosen so that, if the null
+                hypothesis is true, the probability is $\alpha$ that the test statistic will
+                fall in the rejection region.
+        \subsection*{Critical-Value Approach to Hypothesis Testing}
+            \begin{description}
+                \item[Step 1] State the null and alternative hypothesis.
+                \item[Step 2] Decide on the significance level, $\alpha$.
+                \item[Step 3] Compute the value of the test statistic.
+                \item[Step 4] Determine the critical value(s).
+                \item[Step 5] If the value of the test statistic falls in the rejection
+                region, reject $H_0$; otherwise, do not reject $H_0$.
+                \item[Step 6] Interpret the result of the hypothesis test.                
+            \end{description}
+
+    \section*{Section 9.3}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 9.4}
+        \subsection*{$P$-Value}
+            The $P$-value of a hypothesis test is the the probability of getting sample data
+            at least as inconsistent with the null hypothesis (and supportive of the 
+            alternative) hypothesis) as the sample data actually obtained. We use the letter
+            $P$ to denote the $P$-value. Small $P$-values provide evidence against the null
+            hypothesis; large $P$-values do not.
+        \subsection*{Decision Criterion for Hypothesis Test Using the $P$-Values}
+            If the $P$-value is less than or equal to the specified significance level, reject
+            the null hypothesis; otherwise, do not reject the null hypothesis. In other words,
+            if $P \leq \alpha$, reject $H_0$; otherwise, do not reject $H_\alpha$.
+        \subsection*{$P$-Value as the Observed Significance Level}
+            The $P$-value of a hypothesis test equals the smallest significance level at which
+            the null hypothesis can be rejected, that is, the smallest significance level for
+            which the observed sample data result in rejection of $H_0$.
+        \subsection*{Determining a $P$-Value}
+            To determine the P-Value of a hypothesis test, we assume that the null hypothesis
+            is true and compute the probability of observing a value of the test statistic as
+            extreme as or more extreme that that observed. By extreme we mean "far from what
+            we would expect to observe if the null hypothesis is true."
+        \subsection*{$P$-Value Approach to Hypothesis Testing}
+            \begin{description}
+                \item[Step 1] State the null and alternative hypotheses.
+                \item[Step 2] Decide on the significance level, $\alpha$. 
+                \item[Step 3] Compute the value of the test statistic.
+                \item[Step 4] Determine the $P$-value, $P$.
+                \item[Step 5] If $P \leq \alpha$, reject $H_a$; otherwise, do not reject $H_0$.
+                \item[Step 6] Interpret the result of the hypothesis test.    
+            \end{description}
+            \subsubsection*{Hypothesis Tests Without Significance Levels:} Many researchers do
+            do not explicitly refer to significance levels. Instead, they simply obtain the
+            $P$-value and use it (or let the reader us it) to assess the strength of the
+            evidence against the null hypothesis.
+    
+    \section*{Section 9.4}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 9.5}
+        \subsection*{One-Mean z-Test}
+            \begin{description}
+                \item[Purpose] To perform a hypothesis test for a population mean, $\mu$.
+                \item[Assumptions]
+                \begin{enumerate}
+                    \item Simple random sample.
+                    \item Normal population or large sample.
+                    \item $\sigma$ known
+                \end{enumerate}  
+                \item[Step 1] The null hypothesis is $H_0$: $\mu = \mu_0$, and the alternative
+                hypothesis is
+                \begin{center}
+                    \[
+                        H_a: \mu != \mu_0 \quad or \quad H_a: \mu < \mu_0 \quad or \quad 
+                        H_a: \mu > \mu_0    
+                    \]
+                    \[
+                        (Two \quad tailed)\quad\quad\quad(Left \quad Tailed)\quad\quad\quad
+                        (Right \quad tailed)    
+                    \]                    
+                \end{center}
+                \item[Step 2] Decide on the significance level, $\alpha$.
+                \item[Step 3] Compute the value of the test statistic 
+                \begin{center}
+                    \[
+                        z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}    
+                    \]
+                \end{center}
+                and denote that value $z_0$.
+            \end{description}
+            \subsubsection*{Critical-Value Approach}
+                \begin{description}
+                    \item[Step 4] The critical value(s) are
+                    \begin{center}
+                        \[
+                            \pm z _{\alpha/2} \quad\quad or \quad\quad -z_{\alpha} \quad\quad or
+                            \quad\quad z_{\alpha}     
+                        \]
+                        \[
+                            (Two \quad tailed)\quad\quad\quad(Left \quad tailed)\quad\quad\quad
+                            (Right \quad tailed)
+                        \]
+                    \end{center} 
+                    Use a $z$-table to find the critical values.
+                    \item[Step 5] If the value of the test statistic fall in the rejection
+                    region, reject $H_0$; otherwise, do not reject $H_0$.
+                    \item[Step 6] Interpret the results of the hypothesis test. 
+                \end{description}
+            \subsubsection*{$P$-Value Approach}
+                \begin{description}
+                    \item[Step 4] Use a $z$-table to obtain the $P$-value.
+                    \item[Step 5] If $P \leq \alpha$, reject $H_0$; otherwise, do not reject
+                    $H_0$.
+                    \item[Step 6] Interpret the results of the hypothesis test.
+                    \item[Note:] The hypothesis test is exact for normal populations and is
+                    approximate for large samples from nonnormal populations.  
+                \end{description}
+        \subsection*{When to Use the One-Mean $z$-Test}
+            \begin{itemize}
+                \item For small samples, less than 15 roughly, the $z$-test should be used
+                only when the variable under consideration is normally distributed or very
+                close to being so.
+                \item For samples of moderate size, between 15 and 30 roughly, the $z$-test
+                can be used unless the data contain outliers or the variable under
+                consideration is far from being normally distributed.
+                \item For large samples, around 30 or more, the $z$-test can be used
+                essentially without restriction. However, if outliers are present and their
+                removal is not justified , you should perform the hypothesis test once with
+                outliers and once without them to see what effect the outliers have. If the
+                conclusion is affected, use a different procedure or take another sample,
+                if possible.
+                \item If outliers are present but their removal is justified and result in
+                a data set for which the $z$-test us appropriate (as previously stated),
+                the procedure can be used.                
+            \end{itemize}
+
+    \section*{Section 9.5}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
+        \subsection*{One-Mean $t$-Test}
+            \begin{description}
+                \item[Purpose] To perform a hypothesis test for a population mean, $\mu$.
+                \item[Assumptions]
+                \begin{enumerate}
+                    \item Simple random sample
+                    \item Normal Population or large sample
+                    \item $\sigma$ unknown 
+                \end{enumerate} 
+                \item[Step 1] The null hypothesis is $H_0$: $\mu = \mu_0$, and the
+                alternative hypothesis is 
+                \begin{center}
+                    \[
+                        H_0: \mu != \mu_0 \quad or \quad H_0: \mu < \mu_0 \quad or \quad
+                        H_0: \mu > \mu_0    
+                    \]
+                    \[
+                        (Two \quad tailed)\quad\quad\quad(Left \quad tailed)\quad\quad\quad
+                        (Right \quad tailed)    
+                    \]
+                \end{center}
+                \item[Step 2] Decide on the significance level, $\alpha$.
+                \item[Step 3] Compute the value of the test statistic
+                \begin{center}   
+                    \[
+                        t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}    
+                    \]
+                \end{center}
+                and denote that value $t_0$.
+            \end{description}
+            \subsubsection*{Critical-Value Approach}
+                \begin{description}
+                    \item[Step 4] The critical value(s) are
+                    \begin{center}
+                        \[
+                            \pm t_{\alpha/2} \quad\quad or \quad\quad -t_{\alpha} \quad\quad or
+                            \quad\quad t_{\alpha}    
+                        \]
+                        \[
+                            (Two \quad tailed)\quad\quad\quad(Left \quad tailed)\quad\quad\quad
+                            (Right \quad tailed)
+                        \]
+                    \end{center} 
+                    \item[Step 5] If the value of the test statistic fall in the rejection
+                    region, reject $H_0$; otherwise, do not reject $H_0$. 
+                    \item[Step 6] Interpret the results of the hypothesis test.
+                \end{description}
+            \subsubsection*{$P$-Value Approach}
+                \begin{description}
+                    \item[Step 4] The $t$ statistic had $df = n-1$. Use a $t$-table to
+                    estimate the $P$-value; or obtain it exactly by using technology.
+                    \item[Step 5] If $P \leq \alpha$, reject $H_0$; otherwise, do not
+                    reject $H_0$.  
+                    \item[Step 6] Interpret the results of the hypothesis test.
+                \end{description}
+
+    \section*{Section 9.6}
+    \noindent\rule{\textwidth}{0.4pt}
+
+
+    \section*{Section 9.7}
+    \noindent\rule{\textwidth}{0.4pt}
+
+
+    \section*{Section 9.8}
+    \noindent\rule{\textwidth}{0.4pt}
+
 
 \end{document}
 

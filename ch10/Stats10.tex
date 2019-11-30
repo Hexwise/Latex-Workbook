@@ -6,26 +6,266 @@
     \maketitle
 
     \noindent\rule{\textwidth}{0.4pt}
-    \section[]{Section 10.1}
+    \section*{Section 10.1}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-        \begin{equation}
-            f(x) = \frac{10}{\sqrt{2*x}}
-        \end{equation}
-    \section[]{Section 10.2}
+        \subsection*[The sampling Distribution of the Difference between Two Sample Means
+        for Independent Samples]
+            Suppose that $x$ is a normally distributed variable on each of two populations.
+            Then, for independent samples of size $n_1$ and $n_2$ from two populations,
+            \begin{itemize}
+                \item $\mu_{\bar{x_1}-\bar{x_2}} = \mu_1 - \mu_2$,
+                \item $\sigma_{\bar{x_1}-\bar{x_2}} = \sqrt{(\sigma_1^2/n_1) +
+                (\sigma_2^2/n_2)}$, and
+                \item $\bar{x_1} - \bar{x_2}$ is normally distributed.                
+            \end{itemize}
+            
+    \section*{Section 10.2}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 10.3}
+            \subsection*{Distribution of the Pooled $t$-Statistic}
+                Suppose that $x$ is normally distriuted variable on each of two
+                populations and that the population standard deviations are equal. Then,
+                for independent samples od sizes $n_1$ and $n_2$ from the two populations,
+                the variable
+                \begin{center}
+                    \[
+                        t = \frac{(\bar{x_1}-\bar{x_2})-(\mu_1-\mu_2)}{s_p\sqrt{(1/n_1)+(1/n_2)}}    
+                    \]
+                has the $t$-Distribution with $df = n_1 + n_2 - 2$.
+                \end{center}
+            \subsection*{Pooled $t$ Test}
+                \begin{description}
+                    \item[Purpose] To perform a hypothesis test to compare two population
+                    means, $\mu_1$ and $\mu_2$.
+                    \item[Assumptions] 
+                    \begin{enumerate}
+                        \item Simple random samples
+                        \item Independent samples
+                        \item Normal populations or large samples
+                        \item Equal population standard deviation, $\sigma$
+                    \end{enumerate}
+                    \item[Step 1] The null hypothesis is $H_0$: $\mu_1 = \mu_2$, and the
+                    alternative hypothesis is
+                    \begin{center}
+                        \[
+                            H_a: \mu != \mu_0 \quad or \quad H_a: \mu < \mu_0 \quad or \quad 
+                            H_a: \mu > \mu_0    
+                        \]
+                        \[
+                            (Two \quad tailed)\quad\quad\quad(Left \quad Tailed)\quad\quad\quad
+                            (Right \quad tailed)    
+                        \]                    
+                    \end{center}
+                    \item[Step 2] Decide on the significance level, $\alpha$.
+                    \item[Step 3] Compute the value of the test statistic
+                    \begin{center}
+                        \[
+                            t = \frac{\bar{x_1} - \bar{x_2}}{s_p\sqrt{(1/n_2) + (1/n_2)}}, 
+                        \]
+                    \end{center}
+                    where
+                    \begin{center}
+                       \[
+                            s_p = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 -1)s_2^2}{n_1 + n_2 - 2}}.
+                       \]    
+                    \end{center}
+                    Denote the value of the test statistic $t_0$.
+                \end{description}
+                \subsubsection*{Critical-Value Approach}
+                    \begin{description}
+                        \item[Step 4] The critical value(s) are
+                        \begin{center}
+                            \[
+                                \pm z _{\alpha/2} \quad\quad or \quad\quad -z_{\alpha} \quad
+                                \quad or \quad\quad z_{\alpha}     
+                            \]
+                            \[
+                                (Two \quad tailed)\quad\quad\quad(Left \quad tailed)\quad\quad
+                                \quad(Right \quad tailed)
+                            \]
+                        \end{center}
+                        \item[Step 5] If the value of the test statistic falls in the rejection
+                        region, reject $H_0$; otherwise, do not reject $H_0$.
+                        \item[Step 6] Interpret the results of the hypothesis test.  
+                    \end{description}
+            \subsection*{$P$-Value Approach}
+                \begin{description}
+                    \item[Step 4] The $t$-statistic has $df = n_1 + n_2 - 2$. Use a $t$-table
+                    to estimate the $P$-value, or obtain it exactly using technology.
+                    \item[Step 5] If $P \leq \alpha$, reject $H_0$; otherwise, do not reject  
+                    $H_0$.
+                    \item[Step 6] Interpret the results of the hypothesis test.
+                    \item[Note:] The hypothesis test is exact for normal populations and is
+                    approximately correct for large samples from nonnormal populations.   
+                \end{description}
+            \subsection*{Pooled $t$-Interval Procedure}
+                \begin{description}
+                    \item[Purpose] To find a confidence interval for the difference between
+                    two population means, $\mu_1$ and $\mu_2$. 
+                    \item[Assumptions]
+                    \begin{enumerate}
+                        \item Simple random samples
+                        \item Independent samples
+                        \item Normal populations or large samples
+                        \item Equal population standard deviations
+                    \end{enumerate}
+                    \item[Step 1] For a confidence level of $1-\alpha$, use a $t$-table to
+                    find $t_{\alpha/2}$ with $df = n_1 + n_2 - 2$.
+                    \item[Step 2] The endpoints of the confidence interval for $\mu_1-\mu_2$
+                    are
+                    \begin{center}
+                        \[
+                            (\bar{x_1}-\bar{x_2}) \pm t_{\alpha/2}*s_p\sqrt{(1/n_1)+(1/n_2)},    
+                        \]
+                    \end{center}   
+                    where $s_p$ is the pooled sample standard deviation.
+                    \item[Step 3] Interpret the confidence interval.
+                    \item[Note:] The confidence interval is exact for normal populations and
+                    is approximately correct for larger samples from nonnormal populations.  
+                \end{description}
+
+    \section*{Section 10.3}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 10.4}
+        \subsection*{Distribution of the Nonpooled $t$-Statistic}
+            Suppose that $x$ is a normally distributed variable on each of two populations.
+            Then, for independent samples of sizes $n_1$ and $n_2$ from the two populations,
+            the variable
+            \begin{center}
+                \[
+                    t = \frac{(\bar{x_1}-\bar{x_2}-(\mu_1-\mu_2))}
+                             {\sqrt{(s_1^2/n_1)+(s_2^2/n_2)}}    
+                \]
+            \end{center}
+            has approximately a $t$-distribution. The degrees of freedom used is obtained
+            from the sample data. It is denoted $\Delta$ and given by
+            \begin{center}
+                \[
+                    \Delta = \frac{[(s_1^2/n_1)+(s_2^2/n_2)]^2}
+                                  {\frac{(s_1^2/n_1)^2}{n_1-1)}+\frac{(s_2^2/n_2)^2}{n_2-1}}   
+                \]
+            \end{center}
+            rounded down to the nearest integer.
+        \subsection*{Nonpooled $t$-Test}
+            \begin{description}
+                \item[Purpose] To perform a hypothesis test to compare population means,
+                $\mu_1$ and $\mu_2$.
+                \item[Assumptions] 
+                \begin{enumerate}
+                    \item Simple random sample
+                    \item Independent samples 
+                    \item Normal populations or large samples
+                \end{enumerate}
+                \item[Step 1] The null hypothesis is $H_0$: $\mu = \mu_0$, and the alternative
+                hypothesis is
+                \begin{center}
+                    \[
+                        H_a: \mu != \mu_0 \quad or \quad H_a: \mu < \mu_0 \quad or \quad 
+                        H_a: \mu > \mu_0    
+                    \]
+                    \[
+                        (Two \quad tailed)\quad\quad\quad(Left \quad Tailed)\quad\quad\quad
+                        (Right \quad tailed)    
+                    \]                    
+                \end{center}
+                \item[Step 2] Decide on the significance level, $\alpha$.
+                \item[Step 3] Compute the value of the test statistic
+                \begin{center}
+                    \[
+                        t = \frac{\bar{x_1}-\bar{x_2}}{\sqrt{(s_1^2/n_1)+(s_2^2/n_2)}},
+                    \]
+                \end{center} 
+                Denote the value of the test statistic $t_0$. 
+            \end{description}
+            \subsubsection{Critical-Value Approach}
+                \begin{description}
+                    \item[Step 4] The critical value(s) are
+                    \begin{center}
+                        \[
+                            \pm z _{\alpha/2} \quad\quad or \quad\quad -z_{\alpha} \quad\quad or
+                            \quad\quad z_{\alpha}     
+                        \]
+                        \[
+                            (Two \quad tailed)\quad\quad\quad(Left \quad tailed)\quad\quad\quad
+                            (Right \quad tailed)
+                        \]
+                    \end{center}
+                    with $df = \Delta$, where
+                    \begin{center}
+                        \[
+                            \Delta = \frac{[(s_1^2/n_1)+(s_2^2/n_2)]^2}
+                                          {\frac{(s_1^2/n_1)^2}{n_1-1)}+
+                                          \frac{(s_2^2/n_2)^2}{n_2-1}}   
+                        \]
+                    \end{center}
+                    rounded down to the nearest integer. Use a $t$-table to find the critical
+                    value(s).
+                    \item[Step 5] If the value of the test statistic falls in the rejection 
+                    region, reject $H_0$; otherwise, do not reject $H_0$.
+                    \item[Step 6] Interpret the results of the hypothesis test.            
+                \end{description}
+            \subsubsection{$P$-Value Approach}
+                \begin{description}
+                    \item[Step 4] The $t$-statistic has $df = \Delta$, where
+                    \begin{center}
+                        \[
+                            \Delta = \frac{[(s_1^2/n_1)+(s_2^2/n_2)]^2}
+                                          {\frac{(s_1^2/n_1)^2}{n_1-1)}+
+                                          \frac{(s_2^2/n_2)^2}{n_2-1}}   
+                        \]
+                    \end{center}
+                    rounded down to the nearest integer. Use a $t$-table to estimate the 
+                    $P$-value, or obtain it exactly with using technology.
+                    \item[Step 5] If $P \leq \alpha$, reject $H_0$; otherwise, do not reject
+                    $H_0$.
+                    \item[Step 6] Interpret the results of the hypothesis test. 
+                \end{description}
+        \subsection*{Nonpooled $t$-Interval Procedure}
+            \begin{description}
+                \item[Purpose] To find the confidence interval for the difference between two
+                population means, $\mu_1$ and $\mu_2$.
+                \item[Assumptions]
+                \begin{enumerate}
+                   \item Simple random sample
+                   \item Independent samples
+                   \item Normal populations or large samples 
+                \end{enumerate} 
+                \item[Step 1] For a confidence level of $1-\alpha$, use a $t$-table to find
+                $t_{\alpha/2}$ with $df = \Delta$ , where
+                \begin{center}
+                    \[
+                        \Delta = \frac{[(s_1^2/n_1)+(s_2^2/n_2)]^2}
+                                      {\frac{(s_1^2/n_1)^2}{n_1-1)}+
+                                      \frac{(s_2^2/n_2)^2}{n_2-1}}   
+                    \]
+                \end{center}
+                rounded down to the nearest integer.
+                \item[Step 2] The endpoints of the confidence interval for $\mu_1-\mu_2$ are
+                \begin{center}
+                    \[
+                        (\bar{x_1}-\bar{x_2}) \pm t_{\alpha/2}*\sqrt{(s_1^2/n_1)+(s_2^2/n_2)}.    
+                    \]
+                \end{center} 
+                \item[Step 3] Interpret the confidence interval.
+            \end{description}
+        \subsection*{Choosing between a Pooled and Nonpooled $t$-Procedure}    
+            Suppose you want to use independent simple random samples to compare the means of
+            two populations. To decide between a pooled $t$-procedure and a nonpooled
+            $t$-procedure, follow these guidelines: If you are reasonably sure that the populations
+            have nearly equal standard deviations, use a pooled $t$-procedure; otherwise, use a
+            nonpooled $t$-procedure.
+    
+    \section*{Section 10.4}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
-    \section[]{Section 10.5}
+    
+
+    \section*{Section 10.5}
     \noindent\rule{\textwidth}{0.4pt}
-        %text
+
+
+    \section*{Section 10.6}
+    \noindent\rule{\textwidth}{0.4pt}
+
+
+    \section*{Section 10.7}
+    \noindent\rule{\textwidth}{0.4pt}
 
 \end{document}
-
-
-
