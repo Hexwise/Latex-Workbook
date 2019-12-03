@@ -1,23 +1,103 @@
 \documentclass[12pt]{article}
 \usepackage[]{fullpage}
 \title{Chapter 1: Notes}
-\author{Evan Hunt}
+\author{}
 \begin{document}
     \maketitle
 
-    \section[]{Section 1.1}
-        %text
-        \begin{equation}
-            f(x) = \frac{1}{\sqrt{2*x}}
-        \end{equation}
-    \section[]{Section 1.2}
-        %text
-    \section[]{Section 1.3}
-        %text
-    \section[]{Section 1.4}
-        %text
-    \section[]{Section 1.5}
-        %text
+    \noindent\rule{\textwidth}{0.4pt}
+    \section*{Section 1.1}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Descriptive Statistics}
+            Descriptive statistics consists of methods for organizing and summarizing
+            information.
+        \subsection*{Population and Sample}
+            \begin{description}
+                \item[Population:] The collection of all individuals or items under
+                consideration in a statistical study. 
+                \item[Sample:] That part of the population from which information obtained 
+            \end{description}
+        \subsection*{Inferential Statistics}
+            Inferential statistics consists of methods of drawing and measuring the
+            reliability of conclusions about a population based on information obtained
+            from a sample of the population.
+
+    \section*{Section 1.2}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Simple Random Sampling; Simple Random Sample}
+            \begin{description}
+                \item[Simple random sampling:] A sampling procedure for which each
+                possible sample of given size is equally likely to be the one obtained. 
+                \item[Simple random sample:] A sample obtained by simple random sampling.
+            \end{description}
+        Simple random sampling corresponds to our intuitive notion of random selection
+        by lot.
+
+    \section*{Section 1.3}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Systematic Random Sampling}
+            \begin{description}
+                \item[Step 1] Divide the population size by the sample size and round the
+                result down to the nearest whole number, $m$. 
+                \item[Step 2] Use a random-number table or technology to obtain a number,
+                $k$, between 1 and $m$.
+                \item[Step 3] Select for the sample those members of the population that
+                are numbered $k, k+m, k+2m,\dots$
+            \end{description}
+        \subsection*{Cluster Sampling}
+            \begin{description}
+                \item[Step 1] Divide the population into groups (clusters).
+                \item[Step 2] Obtain a simple random sample of the clusters.
+                \item[Step 3] Use all the members of the clusters obtained in Step 2 as
+                the sample.   
+            \end{description}
+        \subsection*{Stratified Random Sampling with Proportional Allocation}
+            \begin{description}
+                \item[Step 1] Divide the population into subpopulations (strata).
+                \item[Step 2] From each stratum, obtain a simple random sample of size
+                proportional to the size of the stratum; that is, the sample size for a
+                stratum equals the total sample size times the stratum size divided by the
+                population size.
+                \item[Step 3] Use all the members obtained in Step 2 as the sample.  
+            \end{description}
+
+    \section*{Section 1.4}
+    \noindent\rule{\textwidth}{0.4pt}
+        \subsection*{Experimental Units; Subjects}
+            In a designed experiment, the individuals or items on which the experiment
+            is performed are called experimental units. When the experimental units are
+            humans, the rem subject is often used in place of experimental unit.
+        \subsection*{Principles of Experimental Design}
+            The following principles of experimental design enable a researcher to
+            conclude that differences in the results of an experiment not reasonably
+            attributable to chance are likely caused by the treatments.
+            \begin{description}
+                \item[Control:] Two or more treatments should be compared.
+                \item[Randomization:] The experimental units should be randomly divided
+                into groups to avoid unintentional selection bias in constituting the
+                groups.
+                \item[Replication:] A sufficient number of experimental units should be
+                used to ensure that randomization creates groups that resemble each other
+                closely and to increase the chances of detecting any differences among the
+                treatments.   
+            \end{description}
+        \subsection*{Response Variable, Factors, Levels, and Treatments}
+            \begin{description}
+                \item[Response variable:] The characteristic of the experimental outcomes
+                that is to be measured or observed.
+                \item[Factor:] A variable whose effect on the response variable is of
+                interest in the experiment.
+                \item[Levels:] The possible values of a factor  
+                \item[Treatment:] Each experimental condition. For one-factor experiments,
+                the treatments are the levels of the single factor. For multifactor
+                experiments, each treatment is a combination of levels of the factors.
+            \end{description}
+        \subsection*{Completely Randomized Design}
+            In a completely randomized Design, all the experimental units are assigned
+            randomly among all the treatments.
+        \subsection*{Randomized Block Design}
+            In a randomized block design, the experimental units are assigned randomly
+            among all the treatments separately within each block.
 
 \end{document}
 

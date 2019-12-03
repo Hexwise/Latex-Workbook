@@ -1,18 +1,76 @@
 \documentclass[12pt]{article}
 \usepackage[]{fullpage}
 \title{Chapter 14: Notes}
-\author{Evan Hunt}
+\author{}
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 \begin{document}
     \maketitle
 
     \noindent\rule{\textwidth}{0.4pt}
     \section*{Section 14.1}
     \noindent\rule{\textwidth}{0.4pt}
-
+        \subsection*{$y$-Intercept and Slope}
+            For a linear equation $y=b_0 + b_1x$, the number $b_0$ is called the $y$-intercept
+            and the number $b_1$ is called slope. The $y$-intercept of a line is where it
+            intersects the $y$-axis. The slope of a line measures its steepness.
+        \subsection*{Graphical Interpretation of Slope}
+            The graph of the linear equation $y=b_0 + b_1x$ slopes upward if $b_1 > 0$, slopes
+            downward if $b_1 < 0$, and is horizontal if $b_1 = 0$.
 
     \section*{Section 14.2}
     \noindent\rule{\textwidth}{0.4pt}
-    
+        \subsection*{Scatterplot}
+            A scatter plot is a graph of data from two quantitative variables of a population.
+            In a scatterplot, we use a horizontal axis for the observations of one variable
+            and a vertical axis for the observations of the other variable. Each pair of
+            observations is then plotted as a point.
+            \subsubsection*{Note:}
+                Data from two quantitative variables of a population are called bivariate
+                quantitative data.
+        \subsection*{Least-Squares Criterion}
+            The least-squares criterion is that the line that best fits a set of data points
+            is the one having the smallest possible sum of squared errors.
+        \subsection*{Regression Line and Regression Equation}
+            \begin{description}
+                \item[Regression line:] The line that best fits a set of data points according
+                to the least-squares criterion.
+                \item[Regression equation:] The equation of the regression line.
+            \end{description}
+        \subsection*{Notation used in Regression and Correlation}
+            For a set of $n$ data points, the defining computing formulas for $S_xx$, $S_xy$,
+            and $S_yy$ are as follows.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|l|l}
+        Quantity&Defining formula&Computing formula \B \\
+        \hline
+        $S_xx$&$\sum(x_i-\bar{x})^2$&$\sum x_i^2-(\sum x_i)^2/n$ \T\B\\
+        $S_xy$&$\sum(x_i-\bar{x})(y_i-\bar{y})$&$\sum x_i y_i-(\sum x_i)(\sum y_i)/n$ \T\B \\
+        $S_yy$&$\sum(y_i-\bar{y})^2$&$\sum y_i^2-(\sum y_i)^2/n$ \T \\
+    \end{tabular}
+\end{table}
+        \subsection*{Regression Equation}
+            The regression equation for a set of $n$ data points is $\hat{y}=b_0-b_i\bar{x}$,
+            where
+            \begin{center}
+                \[
+                    b_1=\frac{S_xy}{S_xx} \quad and \quad b_0=\bar{y}-b_1\bar{x}=
+                    \frac{1}{n}(\sum y_i-b_i\sum x_i),
+                \]
+            \end{center}
+            These two equation give the slope and $y$-intercept of the regression line, 
+            respectively.
+        \subsection*{Response Variable and Predictor Variable}
+            \begin{description}
+                \item[Response variable:] The variable to be measured or observed.
+                \item[Predictor vatiable:] A variable used to predict or explain the value of
+                the response variable. 
+            \end{description}
+        \subsection*{Criterion for Finding a Regression Line}
+            Before finding a regression line for a set of data points, draw a scatterplot. If
+            the data points do not appear to be scattered about a line, do not determine a
+            regression line.
 
 \end{document}
 

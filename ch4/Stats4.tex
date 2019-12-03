@@ -4,7 +4,7 @@
 \author{} 
 \begin{document}
     \maketitle
-    \pagenumbering{arabic}
+
     \noindent\rule{\textwidth}{0.4pt}
     \section*{Section 4.1}
     \noindent\rule{\textwidth}{0.4pt}
@@ -16,34 +16,36 @@
             \end{center}
             For an experiment with equally likely outcomes probabilities are identical to relative 
             frequencies (or percentages).
-        \subsection{Basic Properties of probabilities}
-            \begin{itemize}
-                \item Property 1: The probability of an event is always between 0 and 1, inclusive.
-                \item Property 2: The probability of an event that cannot occur is 0. (An event 
+        \subsection*{Basic Properties of probabilities}
+            \begin{description}
+                \item[Property 1:] The probability of an event is always between 0 and 1, inclusive.
+                \item[Property 2:] The probability of an event that cannot occur is 0. (An event 
                 that cannot occur is called an impossible event.)
-                \item Property 3: The probability of an event that must occur is 1. (An event that 
+                \item[Property 3:] The probability of an event that must occur is 1. (An event that 
                 must occur is called a certain event.)
-            \end{itemize}
+            \end{description}
+
     \section*{Section 4.2}
     \noindent\rule{\textwidth}{0.4pt}
         \subsection*{Sample Space and Event}
-            \begin{itemize}
-                \item Sample Space: The collection of all possible outcomes for an experiment.
-                \item Event: A collection of outcomes for the experiment, that is any subset of the
+            \begin{description}
+                \item[Sample Space:] The collection of all possible outcomes for an experiment.
+                \item[Event:] A collection of outcomes for the experiment, that is any subset of the
                 sample space. An event occurs if only the outcome of the experiment is a member of
                 the event.
-            \end{itemize}
+            \end{description}
         \subsection*{Relationships Among Events}
-            \begin{itemize}
-                \item (\(\neg A\)): "The event "A does not occur"
-                \item (\(A \wedge B\)): "The event "both A and B occur"
-                \item (\(A \vee B\): "The event "either A or B occur"
-            \end{itemize}
+            \begin{description}
+                \item[(\(\neg A\)):] "The event "A does not occur"
+                \item[(\(A \wedge B\)):] "The event "both A and B occur"
+                \item[(\(A \vee B\):] "The event "either A or B occur"
+            \end{description}
         \subsection*{Mutually Exclusive Events}
                Two or more events are mutually exclusive events if not two of them have outcomes in
                common.
                Events are mutually exclusive if no two of them can occur simultaneously or,
                equivalently, if at most one of the events can occur when the experiment is performed.
+
     \section*{Section 4.3}
     \noindent\rule{\textwidth}{0.4pt}
         \subsection*{Probability Notation}
@@ -81,20 +83,19 @@
             \end{center}
             For any two events, the probability that at least one occurs equals the sum of their
             individual probabilities minus the probabilities that both occur.
+
     \section*{Section 4.4}
     \noindent\rule{\textwidth}{0.4pt}
         \subsection*{Contingency Tables}
-            \subsubsection*{}
-                Univariate data is data that comes from one variable of a population.
-            \subsubsection*{}
-                Bivariate data is data that comes from two variables of a population.
-            \subsubsection*{}
-                A frequency table for bivariate data is a contingency table.
+        \begin{description}
+            \item[Univariate data:] data that comes from one variable of a population.
+            \item[Bivariate data:] data that comes from two variables of a population.
+            \item[Contingency table:] A frequency table for bivariate data.  
+        \end{description}
                 \begin{center}
                     \begin{table}[h!]
                         \centering
                         \caption{Contingency Table}
-                        \label{tab:LABEL}
                         \begin{tabular}{l|l|l|l|l|l}
          & $A_1$               & $A_2$               & \dots & $A_n$               & $P(B_j)$          \\
 \hline
@@ -124,6 +125,7 @@ $P(A_i)$ & $P(A_1)$            & $P(A_2)$            & \dots & $P(A_n)$         
             \end{center}
             The conditional probability of one event given another equals the probability that both 
             events occur divided by the probability of the given event.
+            
     \section*{Section 4.6}
     \noindent\rule{\textwidth}{0.4pt}
         \subsection*{The General Multiplication Rule}
@@ -158,6 +160,7 @@ $P(A_i)$ & $P(A_1)$            & $P(A_2)$            & \dots & $P(A_n)$         
             \end{center}
             For independent events,the probability that they all occur equals the product of their 
             individual probabilities.
+
     \section*{Section 4.7}
         \subsection*{The Rule of total Probability}
         Suppose that events $A_1, A_2,\dots, A_k$ are mutually exclusive and exhaustive; that is, 
@@ -176,6 +179,7 @@ $P(A_i)$ & $P(A_1)$            & $P(A_2)$            & \dots & $P(A_n)$         
                 \]
             \end{center}
             where $A_i$ can be any one of events $A_1, A_2,\dots, A_k$.
+            
     \section*{Section 4.8}
         \subsection*{The Basic Counting Rule (BCR)'}
             Suppose that r actions are to be performed in a definite order. Further suppose that
