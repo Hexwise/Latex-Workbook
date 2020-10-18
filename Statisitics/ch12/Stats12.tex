@@ -59,8 +59,11 @@
                 \item[Step 2] The confidence interval for $p$ is from 
                 \begin{center}
                     \[
-                        \hat{p}-z_{\alpha/2}*\sqrt{\hat{p}(1-\hat{p})/n} to
-                        \hat{p}+z_{\alpha/2}*\sqrt{\hat{p}(1-\hat{p})/n},
+                        [ \
+                            \hat{p}-z_{\alpha/2}*\sqrt{\hat{p}(1-\hat{p})/n} 
+                            , \
+                            \hat{p}+z_{\alpha/2}*\sqrt{\hat{p}(1-\hat{p})/n}
+                        \ ],
                     \]
                 \end{center}
                 where $z_{\alpha/2}$ is found in Step 1, $n$ is the sample size, and 
@@ -83,7 +86,7 @@
                 that has a margin of error of at most $E$ can be obtained by choosing
                 \begin{center}
                     \[
-                        n = 0.25(z_{\alpha/2}/E)^2    
+                        n = \frac{(z_{\alpha/2}/E)^2}{4}   
                     \]
                 \end{center}
                 rounded up to the nearest whole number.
@@ -120,8 +123,8 @@
                         H_a: p > p_0    
                     \]
                     \[
-                        (Two \quad tailed)\quad\quad\quad(Left \quad Tailed)\quad\quad\quad
-                        (Right \quad tailed)    
+                        (Two \ Tailed)\quad\quad(Left \ Tailed)\quad\quad
+                        (Right \ Tailed)    
                     \]                    
                 \end{center}
                 \item[Step 2] Decide the significance level, $\alpha$.
@@ -138,12 +141,12 @@
                     \item[Step 4] The critical value(s) are
                     \begin{center}
                         \[
-                            \pm z _{\alpha/2} \quad\quad or \quad\quad -z_{\alpha} \quad
-                            \quad or \quad\quad z_{\alpha}     
+                            \pm z_{\alpha/2} \quad\quad\quad or \quad\quad -z_{\alpha} \quad
+                            \quad or \quad\quad\quad z_{\alpha}     
                         \]
                         \[
-                            (Two \quad tailed)\quad\quad\quad(Left \quad tailed)\quad\quad
-                            \quad(Right \quad tailed)
+                            (Two \ tailed)\quad\quad(Left \ tailed)\quad
+                            \quad(Right \ tailed)
                         \]
                     \end{center}
                     \item[Step 5] If the value of the test statistic falls in the rejection
